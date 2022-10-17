@@ -26,7 +26,7 @@ export default function Home() {
 				{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
 				{/*<div className="filters"></div>*/}
 				{/*<div className="SearchBar"></div>*/}
-				"terzito nishto ne razbira"
+				
 				<nav>
 					<ul>
 						<li>
