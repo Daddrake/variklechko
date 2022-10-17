@@ -26,8 +26,7 @@ export default function Home() {
 				{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
 				{/*<div className="filters"></div>*/}
 				{/*<div className="SearchBar"></div>*/}
-				{}
-
+				"terzito nishto ne razbira"
 				<nav>
 					<ul>
 						<li>
@@ -44,7 +43,6 @@ export default function Home() {
 				<h1 font-weight="bold" className={styles.title}>
 					Добре дошъл във Вариклечко!
 				</h1>
-
 				<div className={styles.grid}>
 					{gpus.map((product) => {
 						return (
