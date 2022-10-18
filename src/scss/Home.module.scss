@@ -3,8 +3,18 @@
 	padding: 0 0.5rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: left;
+	align-items: left;
+}
+
+.bar {
+	padding: 1% 0;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	background-color: #7f7f7f;
+	color: greenyellow;
+	height: auto;
 }
 
 .main {

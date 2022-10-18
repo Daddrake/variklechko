@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import Container from "../Container";
-import styles from "./Nav.module.css";
+import styles from "./Nav.module.scss";
 
 const Nav = ({ children }) => {
   const [total, setTotal] = useState(0);
