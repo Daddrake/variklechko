@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../scss/Home.module.scss";
+import styles from "./Home.module.scss";
 import cpus from "../products/AMD_CPUs.json";
 import gpus from "../products/GPUs.json";
 
@@ -28,13 +28,30 @@ export default function Home() {
 					rel="stylesheet"
 					href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css"
 				/>
+				<link
+					href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+					rel="stylesheet"
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
-			<div className={styles.topNav}>
+			<div class={styles.topNav}>
 				<a className="active" href="#">
 					<img src="variklechko.png" />
 				</a>
 				<a className="active" href="#">
 					<h1 className={styles.title}>ВАРИКЛЕЧКО</h1>
+				</a>
+				<input
+					type="text"
+					name="search"
+					placeholder="Search..."
+					class="search-input"
+				/>
+				<a href="#" class="search-btn">
+					<i class="fas fa-search" />
 				</a>
 				<input
 					className={styles.searchBox}
