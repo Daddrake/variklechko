@@ -29,16 +29,25 @@ export default function Home() {
 					href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css"
 				/>
 			</Head>
-			<div className={styles.bar}>
-				<h1 fontWeight="bold" className={styles.title}>
-					<img src="variklechko.png" /> вариклечко
-				</h1>
-				<a class="active" href="#Вариклечко">
-					Вариклечко
+			<div className={styles.topNav}>
+				<a className="active" href="#">
+					<img src="variklechko.png" />
 				</a>
-				<a href="#about">About</a>
+				<a className="active" href="#">
+					<h1 className={styles.title}>ВАРИКЛЕЧКО</h1>
+				</a>
+				<input
+					className={styles.searchBox}
+					type="text"
+					id="searchBox"
+					size="100"
+					border-radius="25"
+					placeholder="Търси артикул.."
+				/>
+				<a justify-float="right" href="#about">
+					About
+				</a>
 				<a href="#contact">Contact</a>
-				<input className="topnav" type="text" placeholder="Търси артикул.." />
 			</div>
 			<main className={styles.main}>
 				{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
