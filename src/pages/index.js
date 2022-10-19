@@ -26,26 +26,8 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-<<<<<<< HEAD
-
-			{/*<div id="gh-header" className="gh-header">
-				<div className="primary-nav-container horizontal-scroll-shadows is-scrolled-left">
-					<nav className="primary-nav" area-label="primary">
-						<ul className="styles.nav-m">
-							<li className="nav-m-item">
-								<a className="nav-m-link" href="#Hardware">
-									Hardware
-								</a>
-							</li>
-						</ul>
-					</nav>
-	</div>*/}
-			<div className={styles.nav_top}>
-				<a href="#">
-=======
 			<div class={styles.topNav}>
 				<a className="active" href="#">
->>>>>>> efc211a275159164537fd7db6f10b3395f49ec28
 					<img src="variklechko.png" />
 				</a>
 				<a href="#">
