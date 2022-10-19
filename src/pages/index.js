@@ -26,21 +26,12 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<div class={styles.topNav}>
+			<div class={styles.nav_top}>
 				<a className="active" href="#">
 					<img src="variklechko.png" />
 				</a>
 				<a href="#">
 					<h1>ВАРИКЛЕЧКО</h1>
-				</a>
-				<input
-					type="text"
-					name="search"
-					placeholder="Search..."
-					class="search-input"
-				/>
-				<a href="#" class="search-btn">
-					<i class="fas fa-search" />
 				</a>
 				<input
 					className={styles.searchBox}
