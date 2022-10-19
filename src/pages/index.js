@@ -4,17 +4,6 @@ import styles from "../scss/Home.module.scss";
 import cpus from "../products/AMD_CPUs.json";
 import gpus from "../products/GPUs.json";
 
-function someFunc() {
-	var objArr = gpus;
-	for (var i = 0; i < objArr.length; i++) {
-		if (objArr[i].id == "theObjectImLookingFor") {
-			console.log(i);
-			return i;
-		}
-	}
-	return "No value matched";
-}
-
 export default function Home() {
 	return (
 		<div className={styles.container}>
@@ -29,31 +18,97 @@ export default function Home() {
 					href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css"
 				/>
 			</Head>
-			<div className={styles.topNav}>
-				<a className="active" href="#">
+
+			{/*<div id="gh-header" className="gh-header">
+				<div className="primary-nav-container horizontal-scroll-shadows is-scrolled-left">
+					<nav className="primary-nav" area-label="primary">
+						<ul className="styles.nav-m">
+							<li className="nav-m-item">
+								<a className="nav-m-link" href="#Hardware">
+									Hardware
+								</a>
+							</li>
+						</ul>
+					</nav>
+	</div>*/}
+			<div className={styles.nav_top}>
+				<a href="#">
 					<img src="variklechko.png" />
 				</a>
-				<a className="active" href="#">
-					<h1 className={styles.title}>ВАРИКЛЕЧКО</h1>
+				<a href="#">
+					<h1>ВАРИКЛЕЧКО</h1>
 				</a>
 				<input
 					className={styles.searchBox}
 					type="text"
 					id="searchBox"
-					size="100"
-					border-radius="25"
-					placeholder="Търси артикул.."
+					placeholder="Търси артикул ..."
 				/>
-				<a justify-float="right" href="#about">
-					About
+
+				<a className={styles.nav_top_button} href="#about">
+					Wishlist
 				</a>
-				<a href="#contact">Contact</a>
+				<a className={styles.nav_top_button} href="#contact">
+					Contact
+				</a>
+				<a className={styles.nav_top_button} href="#login.html">
+					Login
+				</a>
 			</div>
+			<ul className={styles.nav_category}>
+				<li className={styles.nav_category_button}>
+					<a href="#Hardware">Hardware</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Phone">Phone</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Video">Video, Photo & TV</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Audio">Audio & HiFi</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Home">Home</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Pharmacy">Pharmacy</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Sports">Sports & Freetime</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Diy">DIY & Garden</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Car">Car & Motorcycle</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Toy">Toy & Model Making</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					{" "}
+					<a href="#Games">Games</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Movies">Movies</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Software">Software</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Office">Office & School</a>
+				</li>
+				<li className={styles.nav_category_button}>
+					<a href="#Services">Services</a>
+				</li>
+			</ul>
+			{/*
 			<main className={styles.main}>
 				{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
-				{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
-				{/*<div className="filters"></div>*/}
-				{/*<div className="SearchBar"></div>*/}
+			{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
+			{/*<div className="filters"></div>*/}
+			{/*<div className="SearchBar"></div>}
 				<div className={styles.grid}>
 					{gpus.map((product) => {
 						return (
@@ -114,6 +169,7 @@ export default function Home() {
 					</span>
 				</a>
 			</footer>
+			*/}
 		</div>
 	);
 }
