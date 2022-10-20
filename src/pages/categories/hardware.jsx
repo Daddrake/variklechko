@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "./Home.module.scss";
-import cpus from "../products/AMD_CPUs.json";
-import gpus from "../products/GPUs.json";
+import styles from "/src/pages/Home.module.scss";
+//import cpus from "/src/products_database/AMD_CPUs.json";
+import gpus from "/src/products_database/GPUs.json";
 
-export default function Home() {
+export default function Hardware() {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -27,10 +27,10 @@ export default function Home() {
 				/>
 			</Head>
 			<div className={styles.nav_top}>
-				<a className="active" href="#">
-					<img src="variklechko.png" />
+				<a className="active" href="../">
+					<img src="/public/variklechko.png" />
 				</a>
-				<a href="#">
+				<a href="../">
 					<h1>ВАРИКЛЕЧКО</h1>
 				</a>
 				<input
@@ -40,70 +40,69 @@ export default function Home() {
 					placeholder="Търси артикул ..."
 				/>
 
-				<a className={styles.nav_top_button} href="#about">
+				<a className={styles.nav_top_button} href="../about">
 					Wishlist
 				</a>
-				<a className={styles.nav_top_button} href="#contact">
+				<a className={styles.nav_top_button} href="../contact">
 					Contact
 				</a>
-				<a className={styles.nav_top_button} href="#">
+				<a className={styles.nav_top_button} href="../login">
 					Login
 				</a>
 			</div>
 			<ul className={styles.nav_category}>
 				<li className={styles.nav_category_button}>
-					<a href="#Hardware">Hardware</a>
+					<a href="../categories/hardware">Hardware</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Phone">Phone</a>
+					<a href="../categories/Phone">Phone</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Video">Video, Photo & TV</a>
+					<a href="../categories/Video">Video, Photo & TV</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Audio">Audio & HiFi</a>
+					<a href="../categories/Audio">Audio & HiFi</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Home">Home</a>
+					<a href="../categories/Home">Home</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Pharmacy">Pharmacy</a>
+					<a href="../categories/Pharmacy">Pharmacy</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Sports">Sports & Freetime</a>
+					<a href="../categories/Sports">Sports & Freetime</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Diy">DIY & Garden</a>
+					<a href="../categories/Diy">DIY & Garden</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Car">Car & Motorcycle</a>
+					<a href="../categories/Car">Car & Motorcycle</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Toy">Toy & Model Making</a>
+					<a href="../categories/Toy">Toy & Model Making</a>
 				</li>
 				<li className={styles.nav_category_button}>
 					{" "}
-					<a href="#Games">Games</a>
+					<a href="../categories/Games">Games</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Movies">Movies</a>
+					<a href="../categories/Movies">Movies</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Software">Software</a>
+					<a href="../categories/Software">Software</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Office">Office & School</a>
+					<a href="../categories/Office">Office & School</a>
 				</li>
 				<li className={styles.nav_category_button}>
-					<a href="#Services">Services</a>
+					<a href="../categories/Services">Services</a>
 				</li>
 			</ul>
-			{/*
 			<main className={styles.main}>
 				{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
-			{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
-			{/*<div className="filters"></div>*/}
-			{/*<div className="SearchBar"></div>}
+				{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
+				{/*<div className="filters"></div>*/}
+				{/*<div className="SearchBar"></div>*/}
 				<div className={styles.grid}>
 					{gpus.map((product) => {
 						return (
@@ -164,7 +163,6 @@ export default function Home() {
 					</span>
 				</a>
 			</footer>
-			*/}
 		</div>
 	);
 }
