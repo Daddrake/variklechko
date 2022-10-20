@@ -4,7 +4,7 @@ import styles from "./Home.module.scss";
 import cpus from "../products_database/AMD_CPUs.json";
 import gpus from "../products_database/GPUs.json";
 import React, { useState } from "react";
-import Modal from "./components/login";
+import Modal from "./components/Modal";
 
 export default function Home() {
 	const [showModal, setShowModal] = useState(false);
@@ -50,67 +50,72 @@ export default function Home() {
 				<a className={styles.nav_top_button} href="components/contact">
 					Contact
 				</a>
-				<button
+				<a
+					className={styles.nav_top_button}
 					onClick={() => {
 						setShowModal(true);
 						console.log(showModal);
 					}}
+					show={showModal}
 				>
 					Open Modal
-				</button>
+				</a>
 				{showModal && (
 					<Modal onClose={() => setShowModal(false)} show={showModal}>
 						Hello from the modal!
 					</Modal>
 				)}
 			</div>
-			<ul className={styles.nav_category}>
-				<li className={styles.nav_category_button}>
-					<a href="categories/hardware">Hardware</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Phone">Phone</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Video">Video, Photo & TV</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Audio">Audio & HiFi</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Home">Home</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Pharmacy">Pharmacy</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Sports">Sports & Freetime</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Diy">DIY & Garden</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Car">Car & Motorcycle</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Toy">Toy & Model Making</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Games">Games</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Movies">Movies</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Software">Software</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Office">Office & School</a>
-				</li>
-				<li className={styles.nav_category_button}>
-					<a href="categories/Services">Services</a>
-				</li>
-			</ul>
+			<div className={styles.nav_category}>
+				{" "}
+				<ul className={styles.nav_category}>
+					<li className={styles.nav_category_button}>
+						<a href="categories/hardware">Hardware</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Phone">Phone</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Video">Video, Photo & TV</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Audio">Audio & HiFi</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Home">Home</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Pharmacy">Pharmacy</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Sports">Sports & Freetime</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Diy">DIY & Garden</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Car">Car & Motorcycle</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Toy">Toy & Model Making</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Games">Games</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Movies">Movies</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Software">Software</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Office">Office & School</a>
+					</li>
+					<li className={styles.nav_category_button}>
+						<a href="categories/Services">Services</a>
+					</li>
+				</ul>
+			</div>
 			{/*
 			<main className={styles.main}>
 				{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
