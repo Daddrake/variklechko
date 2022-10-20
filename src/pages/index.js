@@ -26,7 +26,7 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<div class={styles.nav_top}>
+			<div className={styles.nav_top}>
 				<a className="active" href="#">
 					<img src="variklechko.png" />
 				</a>
