@@ -46,7 +46,7 @@ export default function Home() {
 				<a className={styles.nav_top_button} href="#contact">
 					Contact
 				</a>
-				<a className={styles.nav_top_button} href="#login.html">
+				<a className={styles.nav_top_button} href="#">
 					Login
 				</a>
 			</div>
