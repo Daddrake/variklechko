@@ -6,6 +6,47 @@ import gpus from "../products_database/GPUs.json";
 import React, { useState } from "react";
 import Modal from "./components/Modal";
 
+function buildCat(category) {
+	category = category.toString();
+	return (
+		<li className={styles.startpage_cat}>
+			<a
+				className={styles.startpage_cat_img}
+				href={"categories/"+category}
+				title={category}
+			>
+				<img src={category+ "pic.jpg"} title={category}></img>
+			</a>
+			<div>
+				<a
+					className={styles.startpage_cat_title}
+					title={"show "+category+" subcategories"}
+					href={"categories/"+category}
+				>
+					<h2>{category}</h2>
+				</a>
+				<p className={styles.x}>
+					<a className={styles.startpage_cat_sub} href="">
+						Видеокарти (GPU)
+					</a>
+					,{" "}
+					<a className={styles.startpage_cat_sub} href="">
+						Процесори (CPU)
+					</a>
+					,{" "}
+					<a className={styles.startpage_cat_sub} href="">
+						Оперативна памет (RAM)
+					</a>
+					,{" "}
+					<a className={styles.startpage_cat_sub} href="">
+						още...
+					</a>
+				</p>
+			</div>
+		</li>
+	);
+}
+
 export default function Home() {
 	const [showModal, setShowModal] = useState(false);
 
@@ -118,42 +159,7 @@ export default function Home() {
 			</div>
 			<div className={styles.startpage_content}>
 				<ul className={styles.startpage_cat}>
-					<li className={styles.startpage_cat}>
-						<a
-							className={styles.startpage_cat_img}
-							href="categories/hardware"
-							title="hardware"
-						>
-							<img src="hardwarepic.jpg" title="hardware"></img>
-						</a>
-						<div>
-							<a
-								className={styles.startpage_cat_title}
-								title="show hardware subcategories"
-								href="categories/hardware"
-							>
-								<h2> Hardware</h2>
-							</a>
-							<p className={styles.x}>
-								<a className={styles.startpage_cat_sub} href="">
-									Видеокарти (GPU)
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									Процесори (CPU)
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									Оперативна памет (RAM)
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									още...
-								</a>
-							</p>
-						</div>
-					</li>
-
+					{buildCat("Hardware")}
 					<li className={styles.startpage_cat}>
 						<a
 							className={styles.startpage_cat_img}
