@@ -6,7 +6,7 @@ import gpus from "../products_database/GPUs.json";
 import React, { useState } from "react";
 import Modal from "./components/Modal";
 
-function buildCat(category, ...subcategory) {
+function buildCat(category, subref, ...subcategory) {
 	category = category.toString();
 
 	return (
@@ -26,22 +26,24 @@ function buildCat(category, ...subcategory) {
 				>
 					<h2>{category}</h2>
 				</a>
-				<p className={styles.x}>{buildSubcat(subcategory)}</p>
+				<p className={styles.x}>{buildSubcat(subref, subcategory)}</p>
 			</div>
 		</li>
 	);
 }
-function buildSubcat(...subcategory) {
+
+function buildSubcat(subref, ...subcategory) {
 	let subcat = "";
 	for (let i = 0; i < subcategory.length; i++) {
 		subcat = (
-			<a className={styles.startpage_cat_sub} href="">
+			<a className={styles.startpage_cat_sub} href={subref.toString()}>
 				{subcategory[i].toString()}
 			</a>
 		);
 	}
 	return subcat;
 }
+
 export default function Home() {
 	const [showModal, setShowModal] = useState(false);
 
@@ -156,26 +158,23 @@ export default function Home() {
 				<ul className={styles.startpage_cat}>
 					{buildCat(
 						"Hardware",
+						"",
 						"Видеокарти (GPU)",
 						" Процесори (CPU)",
 						" Оперативна памет (RAM)",
 						" още..."
 					)}
-					{buildCat("Phone", "Мобилни телефони", " Smartwatch", " още...")}
-					{buildCat("TV", "Телевизори", " Beamer", " още...")}
-					{buildCat("Audio", "Аудио", " HiFi", " още...")}
-					{buildCat("Home", "Аудио", " HiFi", " още...")}
-					{buildCat("Pharma", "Аудио", " HiFi", " още...")}
-					{buildCat("Sport", "Аудио", " HiFi", " още...")}
-					{buildCat("DIY", "Аудио", " HiFi", " още...")}
+					{buildCat("Phone", "", "Мобилни телефони", " Smartwatch", " още...")}
+					{buildCat("TV", "", "Телевизори", " Beamer", " още...")}
+					{buildCat("Audio", "", "Аудио", " HiFi", " още...")}
+					{buildCat("Home", "", "Аудио", " HiFi", " още...")}
+					{buildCat("Pharma", "", "Аудио", " HiFi", " още...")}
+					{buildCat("Sport", "", "Аудио", " HiFi", " още...")}
+					{buildCat("DIY", "", "Аудио", " HiFi", " още...")}
 				</ul>
 			</div>
 			{/*
 		
-			{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
-			{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
-			{/*<div className="filters"></div>*/}
-			{/*<div className="SearchBar"></div>}
 			<div className={styles.grid}>
 				{gpus.map((product) => {
 					return (
