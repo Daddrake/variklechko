@@ -58,7 +58,7 @@ export default function Home() {
 					}}
 					show={showModal}
 				>
-					Open Modal
+					Login
 				</a>
 				{showModal && (
 					<Modal onClose={() => setShowModal(false)} show={showModal}>
@@ -116,73 +116,225 @@ export default function Home() {
 					</li>
 				</ul>
 			</div>
+			<div className={styles.startpage_content}>
+				<ul className={styles.startpage_cat}>
+					<li className={styles.startpage_cat}>
+						<a
+							className={styles.startpage_cat_img}
+							href="categories/hardware"
+							title="hardware"
+						>
+							<img src="hardwarepic.jpg" title="hardware"></img>
+						</a>
+						<div>
+							<a
+								className={styles.startpage_cat_title}
+								title="show hardware subcategories"
+								href="categories/hardware"
+							>
+								<h2> Hardware</h2>
+							</a>
+							<p className={styles.x}>
+								<a className={styles.startpage_cat_sub} href="">
+									Видеокарти (GPU)
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									Процесори (CPU)
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									Оперативна памет (RAM)
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									още...
+								</a>
+							</p>
+						</div>
+					</li>
+
+					<li className={styles.startpage_cat}>
+						<a
+							className={styles.startpage_cat_img}
+							href="categories/phone"
+							title="phone"
+						>
+							<img src="phonepic.jpg" title="phone"></img>
+						</a>
+						<div>
+							<a
+								className={styles.startpage_cat_title}
+								title="show phone subcategories"
+								href="categories/phone"
+							>
+								<h2>Телефони</h2>
+							</a>
+							<p className={styles.x}>
+								<a className={styles.startpage_cat_sub} href="">
+									Мобилни телефони
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									Smartwatch
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									още...
+								</a>
+							</p>
+						</div>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a
+							className={styles.startpage_cat_img}
+							href="categories/tv"
+							title="tv"
+						>
+							<img src="tvpic.jpg" title="tv"></img>
+						</a>
+						<div>
+							<a
+								className={styles.startpage_cat_title}
+								title="show tv subcategories"
+								href="categories/tv"
+							>
+								<h2>TВ, Видео & Фото</h2>
+							</a>
+							<p className={styles.x}>
+								<a className={styles.startpage_cat_sub} href="">
+									Телевизори
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									Фотоапарати
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									още...
+								</a>
+							</p>
+						</div>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a className={styles.startpage_cat_img} href="" title="audio">
+							<img src="audiopic.jpg" title="audio"></img>
+						</a>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a className={styles.startpage_cat_img} href="" title="home">
+							<img src="homepic.jpg" title="home"></img>
+						</a>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a className={styles.startpage_cat_img} href="" title="pharmacy">
+							<img src="pharmacypic.jpg" title="pharmacy"></img>
+						</a>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a className={styles.startpage_cat_img} href="" title="sport">
+							<img src="sportpic.jpg" title="sport"></img>
+						</a>
+					</li>
+					<li className={styles.startpage_cat}>
+						<a
+							className={styles.startpage_cat_img}
+							href="categories/diy"
+							title="diy"
+						>
+							<img src="diypic.jpg" title="diy"></img>
+						</a>
+						<div>
+							<a
+								className={styles.startpage_cat_title}
+								title="show diy subcategories"
+								href="categories/diy"
+							>
+								<h2>DIY</h2>
+							</a>
+							<p className={styles.x}>
+								<a className={styles.startpage_cat_sub} href="">
+									Автоматизация на сгради и сигурност
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									Производство и съхранение на енергия
+								</a>
+								,{" "}
+								<a className={styles.startpage_cat_sub} href="">
+									още...
+								</a>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 			{/*
-			<main className={styles.main}>
-				{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
+		
+			{/*<div className="Header-grid - logo, searchbar, deals, wunschlisten, einstellungen, anmelden"></div>*/}
 			{/*<nav className="NavBar - hardware, telefone, video's fotos"></div>*/}
 			{/*<div className="filters"></div>*/}
 			{/*<div className="SearchBar"></div>}
-				<div className={styles.grid}>
-					{gpus.map((product) => {
-						return (
-							<div key={product.Title} className={styles.list}>
-								<h4>
-									<img
-										src={product.Image}
-										//width="auto"
-										//height="auto"
-										alt={`Preview of ${product.Title}`}
-									/>
-									{product.Title}
-								</h4>
-								<p>{product.Info}</p>
-								<p>
-									More info at:
-									<a href={product.Title_URL}> geizhals.de</a>
-								</p>
-								<p>
-									{product.Retailers <= 1
-										? product.Price
-										: product.Price.substring(2)}
-								</p>
-								<p>
-									<button
-										className="snipcart-add-item"
-										data-item-id={product.itemId}
-										data-item-image={product.Title_URL}
-										data-item-name={product.Info}
-										data-item-price={product.Price.substring(2)}
-									>
-										Добави в количка
-									</button>
-								</p>
-							</div>
-						);
-					})}
-				</div>
-			</main>
+			<div className={styles.grid}>
+				{gpus.map((product) => {
+					return (
+						<div key={product.Title} className={styles.list}>
+							<h4>
+								<img
+									src={product.Image}
+									//width="auto"
+									//height="auto"
+									alt={`Preview of ${product.Title}`}
+								/>
+								{product.Title}
+							</h4>
+							<p>{product.Info}</p>
+							<p>
+								More info at:
+								<a href={product.Title_URL}> geizhals.de</a>
+							</p>
+							<p>
+								{product.Retailers <= 1
+									? product.Price
+									: product.Price.substring(2)}
+							</p>
+							<p>
+								<button
+									className="snipcart-add-item"
+									data-item-id={product.itemId}
+									data-item-image={product.Title_URL}
+									data-item-name={product.Info}
+									data-item-price={product.Price.substring(2)}
+								>
+									Добави в количка
+								</button>
+							</p>
+						</div>
+					);
+				})}
+			</div>
 
-			<footer className={styles.footer}>
-				<script
-					async
-					src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"
-				/>
-				<div
-					id="snipcart"
-					data-api-key="MTk5ZjVjMTQtY2U0ZC00OTUyLWExZDUtMzhhOTNhNTY3MTY4NjM4MDE0NjE5OTcxNjg1MTcy"
-				/>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{" "}
-					<span className={styles.logo}>
-						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-					</span>
-				</a>
-			</footer>
-			*/}
+		<footer className={styles.footer}>
+			<script
+				async
+				src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"
+			/>
+			<div
+				id="snipcart"
+				data-api-key="MTk5ZjVjMTQtY2U0ZC00OTUyLWExZDUtMzhhOTNhNTY3MTY4NjM4MDE0NjE5OTcxNjg1MTcy"
+			/>
+			<a
+				href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				Powered by{" "}
+				<span className={styles.logo}>
+					<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+				</span>
+			</a>
+		</footer>
+		*/}
 		</div>
 	);
 }
