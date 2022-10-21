@@ -6,47 +6,42 @@ import gpus from "../products_database/GPUs.json";
 import React, { useState } from "react";
 import Modal from "./components/Modal";
 
-function buildCat(category) {
+function buildCat(category, ...subcategory) {
 	category = category.toString();
+
 	return (
 		<li className={styles.startpage_cat}>
 			<a
 				className={styles.startpage_cat_img}
-				href={"categories/"+category}
+				href={"categories/" + category}
 				title={category}
 			>
-				<img src={category+ "pic.jpg"} title={category}></img>
+				<img src={category + ".jpg"} title={category}></img>
 			</a>
 			<div>
 				<a
 					className={styles.startpage_cat_title}
-					title={"show "+category+" subcategories"}
-					href={"categories/"+category}
+					title={"show " + category + " subcategories"}
+					href={"categories/" + category}
 				>
 					<h2>{category}</h2>
 				</a>
-				<p className={styles.x}>
-					<a className={styles.startpage_cat_sub} href="">
-						Видеокарти (GPU)
-					</a>
-					,{" "}
-					<a className={styles.startpage_cat_sub} href="">
-						Процесори (CPU)
-					</a>
-					,{" "}
-					<a className={styles.startpage_cat_sub} href="">
-						Оперативна памет (RAM)
-					</a>
-					,{" "}
-					<a className={styles.startpage_cat_sub} href="">
-						още...
-					</a>
-				</p>
+				<p className={styles.x}>{buildSubcat(subcategory)}</p>
 			</div>
 		</li>
 	);
 }
-
+function buildSubcat(...subcategory) {
+	let subcat = "";
+	for (let i = 0; i < subcategory.length; i++) {
+		subcat = (
+			<a className={styles.startpage_cat_sub} href="">
+				{subcategory[i].toString()}
+			</a>
+		);
+	}
+	return subcat;
+}
 export default function Home() {
 	const [showModal, setShowModal] = useState(false);
 
@@ -159,120 +154,20 @@ export default function Home() {
 			</div>
 			<div className={styles.startpage_content}>
 				<ul className={styles.startpage_cat}>
-					{buildCat("Hardware")}
-					<li className={styles.startpage_cat}>
-						<a
-							className={styles.startpage_cat_img}
-							href="categories/phone"
-							title="phone"
-						>
-							<img src="phonepic.jpg" title="phone"></img>
-						</a>
-						<div>
-							<a
-								className={styles.startpage_cat_title}
-								title="show phone subcategories"
-								href="categories/phone"
-							>
-								<h2>Телефони</h2>
-							</a>
-							<p className={styles.x}>
-								<a className={styles.startpage_cat_sub} href="">
-									Мобилни телефони
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									Smartwatch
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									още...
-								</a>
-							</p>
-						</div>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a
-							className={styles.startpage_cat_img}
-							href="categories/tv"
-							title="tv"
-						>
-							<img src="tvpic.jpg" title="tv"></img>
-						</a>
-						<div>
-							<a
-								className={styles.startpage_cat_title}
-								title="show tv subcategories"
-								href="categories/tv"
-							>
-								<h2>TВ, Видео & Фото</h2>
-							</a>
-							<p className={styles.x}>
-								<a className={styles.startpage_cat_sub} href="">
-									Телевизори
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									Фотоапарати
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									още...
-								</a>
-							</p>
-						</div>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a className={styles.startpage_cat_img} href="" title="audio">
-							<img src="audiopic.jpg" title="audio"></img>
-						</a>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a className={styles.startpage_cat_img} href="" title="home">
-							<img src="homepic.jpg" title="home"></img>
-						</a>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a className={styles.startpage_cat_img} href="" title="pharmacy">
-							<img src="pharmacypic.jpg" title="pharmacy"></img>
-						</a>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a className={styles.startpage_cat_img} href="" title="sport">
-							<img src="sportpic.jpg" title="sport"></img>
-						</a>
-					</li>
-					<li className={styles.startpage_cat}>
-						<a
-							className={styles.startpage_cat_img}
-							href="categories/diy"
-							title="diy"
-						>
-							<img src="diypic.jpg" title="diy"></img>
-						</a>
-						<div>
-							<a
-								className={styles.startpage_cat_title}
-								title="show diy subcategories"
-								href="categories/diy"
-							>
-								<h2>DIY</h2>
-							</a>
-							<p className={styles.x}>
-								<a className={styles.startpage_cat_sub} href="">
-									Автоматизация на сгради и сигурност
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									Производство и съхранение на енергия
-								</a>
-								,{" "}
-								<a className={styles.startpage_cat_sub} href="">
-									още...
-								</a>
-							</p>
-						</div>
-					</li>
+					{buildCat(
+						"Hardware",
+						"Видеокарти (GPU)",
+						" Процесори (CPU)",
+						" Оперативна памет (RAM)",
+						" още..."
+					)}
+					{buildCat("Phone", "Мобилни телефони", " Smartwatch", " още...")}
+					{buildCat("TV", "Телевизори", " Beamer", " още...")}
+					{buildCat("Audio", "Аудио", " HiFi", " още...")}
+					{buildCat("Home", "Аудио", " HiFi", " още...")}
+					{buildCat("Pharma", "Аудио", " HiFi", " още...")}
+					{buildCat("Sport", "Аудио", " HiFi", " още...")}
+					{buildCat("DIY", "Аудио", " HiFi", " още...")}
 				</ul>
 			</div>
 			{/*

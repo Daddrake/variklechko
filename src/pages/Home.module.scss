@@ -75,7 +75,7 @@
 	&_content {
 		grid-gap: 1.5rem;
 		display: grid;
-		grid-template-columns: 3fr auto auto;
+		grid-template-columns: 2fr auto auto;
 	}
 	&_cat {
 		display: grid;
@@ -106,12 +106,12 @@
 			display: flex;
 			flex-grow: 0;
 			flex-shrink: 0;
-			margin: 0;
+			margin: -10px 0 0 -30px;
 			padding: 1rem;
 			position: relative;
 		}
 		&_title {
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 			color: #b7dcfb;
 			font-weight: 700;
 		}
