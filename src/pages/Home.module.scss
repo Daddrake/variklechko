@@ -46,14 +46,40 @@
 			border-radius: 15px;
 		}
 	}
-
 	&_category {
+		max-width: var(--max-width-site);
+		scrollbar-width: none;
 		list-style: none;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		text-align: center;
 		padding: 0px;
+		ul {
+			align-items: stretch;
+			display: flex;
+			text-align: center;
+			font-size: 0.75rem;
+			width: 100%;
+			li {
+				border-right: 1px solid #ffffff40;
+				border-right-color: rgba(255, 255, 255, 0.25);
+				margin: 0;
+				min-height: 2rem;
+				a {
+					align-items: center;
+					color: inherit;
+					display: flex;
+					height: 100%;
+					justify-content: center;
+					min-width: 3.5rem;
+					padding: .35rem;
+					position: relative;
+					text-align: center;
+					text-decoration: none;
+				}
+			}
+		}
 		:hover {
 			background-color: #eaeaea59;
 		}

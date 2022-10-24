@@ -76,10 +76,28 @@ export default function Home() {
 					<h1>ВАРИКЛЕЧКО</h1>
 				</a>
 				<input
+					type="text"
+					id="fs"
+					name="fs"
+					class="gh-search__input"
+					data-acs="/acses?lang=de&amp;loc=de&amp;o=json&amp;k="
+					placeholder="Suche ..."
+					accesskey="q"
+					itemprop="query-input"
+					value=""
+					size="35"
+				></input>
+				<input
 					className={styles.searchBox}
 					type="text"
 					id="searchBox"
 					placeholder="Търси артикул ..."
+					enterkeyhint="search"
+					size="35"
+					autocomplete="off"
+					aria-label="Suche"
+					aria-autocomplete="list"
+					aria-controls="autocomplete-list"
 				/>
 
 				<a className={styles.nav_top_button} href="components/about">
@@ -105,7 +123,6 @@ export default function Home() {
 				)}
 			</div>
 			<div className={styles.nav_category}>
-				{" "}
 				<ul className={styles.nav_category}>
 					<li className={styles.nav_category_button}>
 						<a href="categories/hardware">Hardware</a>
