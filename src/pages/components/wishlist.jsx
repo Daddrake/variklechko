@@ -26,10 +26,10 @@ export default function Home() {
 				/>
 			</Head>
 			<div className={styles.nav_top}>
-				<a className="active" href="">
+				<a className="active" href="../">
 					<img src="../img/variklechko.png" />
 				</a>
-				<a href="">
+				<a href="../">
 					<h1>ВАРИКЛЕЧКО</h1>
 				</a>
 				<input
@@ -40,10 +40,10 @@ export default function Home() {
 					enterkeyhint="search"
 				/>
 
-				<a className={styles.nav_top_button} href="components/about">
+				<a className={styles.nav_top_button} href="../components/wishlist">
 					Wishlist
 				</a>
-				<a className={styles.nav_top_button} href="components/contact">
+				<a className={styles.nav_top_button} href="../components/contact">
 					Contact
 				</a>
 				<a className={styles.nav_top_button} onClick="">
@@ -99,14 +99,19 @@ export default function Home() {
 					</li>
 				</ul>
 			</div>
-            
-            <div className={styles.wishlist}>
-                <h1>Your Wish List</h1>
-                    <input type="text" name='wish' placeholder="Create a new wish" required maxlength="25"/>
-                    <input type="submit" value="Send"/>
-                <ul>
-                </ul>
-            </div>
+
+			<div className={styles.wishlist}>
+				<h1>Your Wish List</h1>
+				<input
+					type="text"
+					name="wish"
+					placeholder="Create a new wish"
+					required
+					maxlength="25"
+				/>
+				<input type="submit" value="Send" />
+				<ul></ul>
+			</div>
 		</div>
 	);
 }
