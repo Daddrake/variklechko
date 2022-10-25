@@ -11,6 +11,7 @@
 	justify-content: center;
 	align-items: center;
 	&_top {
+		background-color: #1c222a;
 		display: flex;
 		flex-direction: row;
 		a:hover {
@@ -48,6 +49,7 @@
 		}
 	}
 	&_category {
+		background-color: #161b22;
 		color:aliceblue;
 		max-width: var(--max-width-site);
 		scrollbar-width: none;
@@ -65,6 +67,7 @@
 			font-size: 0.75rem;
 			width: 120%;
 			li {
+				font-size: 1rem;
 				border-right: 1px solid #ffffff40;
 				border-right-color: rgba(255, 255, 255, 0.25);
 				margin: 0;
