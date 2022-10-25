@@ -27,7 +27,7 @@ export default function Hardware() {
 			</Head>
 			<div className={styles.nav_top}>
 				<a className="active" href="../">
-					<img src="/public/variklechko.png" />
+					<img src="../img/variklechko.png" />
 				</a>
 				<a href="../">
 					<h1>ВАРИКЛЕЧКО</h1>

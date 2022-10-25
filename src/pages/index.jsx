@@ -99,7 +99,7 @@ export default function Home() {
 				<div className={styles.nav_category}>
 					<ul className={styles.nav_category}>
 						<li className={styles.nav_category_button}>
-							<a href="categories/hardware">Hardware</a>
+							<a href="categories/Hardware">Hardware</a>
 						</li>
 						<li className={styles.nav_category_button}>
 							<a href="categories/Phone">Phone</a>
@@ -145,6 +145,7 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
+				<div className={styles.header}><h1>VARIKLECHKO: Пазарувай лесно и евтино от Германия!</h1></div>
 				<div className={styles.startpage_content}>
 					<ul className={styles.startpage_cat}>
 						{buildCat(
