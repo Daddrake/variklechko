@@ -64,7 +64,7 @@
 			align-items: stretch;
 			display: flex;
 			text-align: center;
-			font-size: 0.75rem;
+			font-size: 0.65rem;
 			width: 120%;
 			li {
 				font-size: 1rem;
@@ -103,7 +103,7 @@
 		gap: 1rem;
 		grid-template-columns: repeat(4, 1fr);
 		margin: 30 0 1rem;
-		//text-align: center;
+		text-align: center;
 		&_img {
 			border-radius: 5px;
 			display: inline-block;
@@ -132,7 +132,7 @@
 			position: relative;
 		}
 		&_title {
-			font-size: 0.8rem;
+			font-size: 0.7em;
 			color: #b7dcfb;
 			font-weight: 700;
 		}
@@ -140,12 +140,9 @@
 			width: fit-content;
 		}
 	}
-	p.x,
-	&_title,
-	&_subcat li {
-		font-size: 0.75rem;
-		line-height: 1.6;
-		margin-bottom: 0;
-		margin-top: 0.35rem;
-	}
+}
+
+.contact {
+	justify-content: center;
+	align-items: center;
 }

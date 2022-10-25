@@ -99,14 +99,42 @@ export default function Home() {
 					</li>
 				</ul>
 			</div>
-            
-            <div className={styles.wishlist}>
-                <h1>Your Wish List</h1>
-                    <input type="text" name='wish' placeholder="Create a new wish" required maxlength="25"/>
-                    <input type="submit" value="Send"/>
-                <ul>
-                </ul>
-            </div>
+
+			<div className={styles.contact}>
+				<h1>Contact us on</h1>
+				<a href="">
+					<img
+						width="20px"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/900px-Facebook_logo_%28square%29.png?20140103173026"
+					/>{" "}
+					Facebook
+				</a>
+				<a href="">
+					<p></p>
+					<img
+						width="20px"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png"
+					/>{" "}
+					Instagram
+				</a>
+				<a href="">
+					<p></p>
+					<img
+						width="20px"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png"
+					/>{" "}
+					WhatsApp: +491744159316
+				</a>
+				<a href="mailto:variklechko@gmail.com">
+					<p></p>
+					<img
+						width="20px"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/768px-Gmail_icon_%282020%29.svg.png?20221017173631"
+					/>{" "}
+					E-Mail: variklechko@gmail.com
+				</a>
+				<ul></ul>
+			</div>
 		</div>
 	);
 }
