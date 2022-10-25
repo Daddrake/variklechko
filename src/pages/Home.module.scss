@@ -1,5 +1,5 @@
 .container {
-	background-color: #242c36;
+	background-color: #1c222a;
 	color: #b4b4b4;
 	overflow-y: scroll;
 }
@@ -50,7 +50,7 @@
 	}
 	&_category {
 		background-color: #161b22;
-		color:aliceblue;
+		color: aliceblue;
 		max-width: var(--max-width-site);
 		scrollbar-width: none;
 		list-style: none;
@@ -94,7 +94,7 @@
 
 .startpage {
 	&_content {
-		grid-gap: 1.5rem;
+		grid-gap: 1.2rem;
 		display: grid;
 		grid-template-columns: 2fr auto auto;
 	}
@@ -102,7 +102,7 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(4, 1fr);
-		margin: 0 0 1rem;
+		margin: 30 0 1rem;
 		//text-align: center;
 		&_img {
 			border-radius: 5px;
@@ -139,9 +139,6 @@
 		&_sub {
 			width: fit-content;
 		}
-	}
-	&_subcat {
-		list-style: none;
 	}
 	p.x,
 	&_title,
