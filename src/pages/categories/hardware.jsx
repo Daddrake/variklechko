@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "/src/pages/Home.module.scss";
-//import cpus from "/src/products_database/AMD_CPUs.json";
 import gpus from "/src/products_database/GPUs.json";
 
 export default function Hardware() {
