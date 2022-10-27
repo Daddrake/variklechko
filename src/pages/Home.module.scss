@@ -106,9 +106,9 @@
 	&_cat {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		margin: 30 0 1rem;
-		text-align: center;
+		text-align: left;
 		&_img {
 			border-radius: 5px;
 			display: inline-block;
