@@ -40,10 +40,16 @@ export default function Home() {
 					enterkeyhint="search"
 				/>
 
-				<a className={styles.nav_top_button} href="/src/pages/components/wishlist">
+				<a
+					className={styles.nav_top_button}
+					href="/src/pages/components/wishlist"
+				>
 					Wishlist
 				</a>
-				<a className={styles.nav_top_button} href="/src/pages/components/contact">
+				<a
+					className={styles.nav_top_button}
+					href="/src/pages/components/contact"
+				>
 					Contact
 				</a>
 				<a className={styles.nav_top_button} onClick="">
@@ -53,7 +59,7 @@ export default function Home() {
 			<div className={styles.nav_category}>
 				<ul className={styles.nav_category}>
 					<li className={styles.nav_category_button}>
-						<a href="../categories/hardware">Hardware</a>
+						<a href="../categories/Hardware">Hardware</a>
 					</li>
 					<li className={styles.nav_category_button}>
 						<a href="../categories/Phone">Phone</a>
@@ -107,7 +113,7 @@ export default function Home() {
 					name="wish"
 					placeholder="Create a new wish"
 					required
-					maxlength="25"
+					maxLength="25"
 				/>
 				<input type="submit" value="Send" />
 				<ul></ul>

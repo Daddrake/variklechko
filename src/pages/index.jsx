@@ -6,7 +6,6 @@ import React, { useState } from "react";
 
 function buildCat(category, subref, ...subcategory) {
 	category = category.toString();
-
 	return (
 		<li className={styles.startpage_cat}>
 			<a
@@ -43,6 +42,9 @@ function buildSubcat(subref, ...subcategory) {
 }
 
 export default function Home() {
+	document.cookie = "username = Vanko";
+	console.log(navigator.cookieEnabled);
+	console.log(document.cookie);
 	const [isLogged, setIsLogged] = useState(false);
 	if (!isLogged) {
 		return (

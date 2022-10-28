@@ -46,9 +46,7 @@ export default function Home() {
 				<a className={styles.nav_top_button} href="../components/contact">
 					Contact
 				</a>
-				<a className={styles.nav_top_button} onClick="">
-					Login
-				</a>
+				<a className={styles.nav_top_button}>Login</a>
 			</div>
 			<div className={styles.nav_category}>
 				<ul className={styles.nav_category}>
