@@ -1,14 +1,14 @@
 import styles from "./Home.module.scss";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import Cookies from 'universal-cookie';
+import Cookies from "universal-cookie";
 
 export default function Home() {
 	const [isLogged, setIsLogged] = useState(false);
 	if (!isLogged) {
 		return (
 			<div className={styles.container}>
-				<Navbar></Navbar>
+				<Navbar />
 				<div className={styles.header}>
 					<h1>VARIKLECHKO: Пазарувай лесно и евтино от Германия!</h1>
 				</div>
@@ -191,7 +191,6 @@ export default function Home() {
 							" консумативи за рисуване и занаяти,",
 							"други... "
 						)}
-						
 					</ul>
 				</div>
 				{/*
@@ -261,7 +260,6 @@ export default function Home() {
 	} else {
 	}
 }
-
 
 function buildCat(category, ref, ...subcategory) {
 	category = category.toString();

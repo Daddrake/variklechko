@@ -43,13 +43,13 @@ export default function Navbar() {
 					//aria-controls="autocomplete-list"
 				/>
 
-				<a className={styles.nav_top_button} href="components/wishlist">
+				<a className={styles.nav_top_button} href="../components/wishlist">
 					Wishlist
 				</a>
-				<a className={styles.nav_top_button} href="components/contact">
+				<a className={styles.nav_top_button} href="../components/contact">
 					Contact
 				</a>
-				<a className={styles.nav_top_button} onClick="">
+				<a className={styles.nav_top_button} href="../components/login">
 					Login
 				</a>
 			</div>
