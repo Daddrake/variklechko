@@ -25,10 +25,10 @@ export default function Navbar() {
 				/>
 			</Head>
 			<div className={styles.nav_top}>
-				<a className="active" href="">
+				<a className="active" href="../">
 					<img src="../img/variklechko.png" />
 				</a>
-				<a href="">
+				<a href="../">
 					<h1>ВАРИКЛЕЧКО</h1>
 				</a>
 				<input
@@ -56,52 +56,49 @@ export default function Navbar() {
 			<div className={styles.nav_category}>
 				<ul className={styles.nav_category}>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Hardware">Hardware</a>
+						<a href="../categories/Hardware">Hardware</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Phone">Phone</a>
+						<a href="../categories/Mobile">Phone</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Video">Video, Photo & TV</a>
+						<a href="../categories/TV">Video, Photo & TV</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Audio">Audio & HiFi</a>
+						<a href="../categories/Audio">Audio & HiFi</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Home">Home</a>
+						<a href="../categories/Home">Home</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Pharmacy">Pharmacy</a>
+						<a href="../categories/Pharmacy">Pharmacy</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Sports">Sports & Freetime</a>
+						<a href="../categories/Sport">Sports & Freetime</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Diy">DIY & Garden</a>
+						<a href="../categories/Diy">DIY & Garden</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Car">Car & Motorcycle</a>
+						<a href="../categories/Car">Car & Motorcycle</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Toy">Toy & Model Making</a>
+						<a href="../categories/Toy">Toy & Model Making</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Games">Games</a>
+						<a href="../categories/Games">Games</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Movies">Movies</a>
+						<a href="../categories/Movies">Movies</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Software">Software</a>
+						<a href="../categories/Software">Software</a>
 					</li>
 					<li className={styles.nav_category_button}>
-						<a href="categories/Office">Office & School</a>
-					</li>
-					<li className={styles.nav_category_button}>
-						<a href="categories/Services">Services</a>
+						<a href="../categories/Office">Office & School</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	);
-};
+}

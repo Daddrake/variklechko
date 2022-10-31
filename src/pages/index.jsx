@@ -1,46 +1,7 @@
 import styles from "./Home.module.scss";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-
-function buildCat(category, ref, ...subcategory) {
-	category = category.toString();
-	return (
-		<li className={styles.startpage_cat}>
-			<a
-				className={styles.startpage_cat_img}
-				href={"categories/" + ref}
-				title={category}
-			>
-				<img src={"../img/" + category + ".jpg"} title={category}></img>
-			</a>
-			<div>
-				<a
-					className={styles.startpage_cat_title}
-					title={"show " + category + " subcategories"}
-					href={"categories/" + ref}
-				>
-					<h2>{category}</h2>
-				</a>
-				<p className={styles.x}>{buildSubcat(subcategory)}</p>
-			</div>
-		</li>
-	);
-}
-
-function buildSubcat(...subcategory) {
-	let subcat;
-	let subcats = [];
-	for (let i = 0; i < subcategory[0].length; i++) {
-		subcat = (
-			<a className={styles.startpage_cat_sub} href={subcategory[0][i]}>
-				{subcategory[0][i + 1]}
-			</a>
-		);
-		subcats.push(subcat);
-		i++;
-	}
-	return [subcats];
-}
+import Cookies from 'universal-cookie';
 
 export default function Home() {
 	const [isLogged, setIsLogged] = useState(false);
@@ -133,10 +94,9 @@ export default function Home() {
 							"m_home",
 							" други..."
 						)}
-						{/*
 						{buildCat(
 							"Дрогерия и лекарства",
-							"",
+							"Pharmacy",
 							"Здравеопазване,",
 							" първа помощ и хигиена,",
 							" лекарства и хранителни добавки,",
@@ -147,7 +107,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Спорт",
-							"",
+							"Sport",
 							"Часовници,",
 							" Outdoor,",
 							" ролкови спортове,",
@@ -158,7 +118,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"DIY",
-							"",
+							"Diy",
 							"Сградна автоматизация и сигурност,",
 							" производство и съхранение на електроенергия,",
 							" оборудване за работилници,",
@@ -169,7 +129,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Автомобили и мотоциклети",
-							"",
+							"Car",
 							"Автомобили и мотоциклети,",
 							" автомобилни гуми и джанти,",
 							" аксесоари,",
@@ -181,7 +141,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Играчки и създаване на модели",
-							"",
+							"Toy",
 							" Създаване на RC модели,",
 							" игри за конструиране и строителство,",
 							" други играчки,",
@@ -192,18 +152,18 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Игри",
-							"",
+							"Games",
 							"PlayStation 5 (PS5),",
 							" Nintendo Switch,",
 							" Xbox Series X & Series S,",
 							" PlayStation 4 (PS4),",
-							" Игри за PC",,
+							" Игри за PC",
 							" Книги за решаване и други,",
 							" други..."
 						)}
 						{buildCat(
 							"Филми",
-							"",
+							"Movies",
 							"Филми,",
 							" Blu-ray,",
 							" Филми DVD,",
@@ -211,7 +171,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Софтуеaр",
-							"",
+							"Software",
 							"Операционни системи,",
 							" Офис,",
 							" Графика и видео,",
@@ -222,7 +182,7 @@ export default function Home() {
 						)}
 						{buildCat(
 							"Офис и училище",
-							"",
+							"Office",
 							"Принтери и скенери,",
 							" презентации,",
 							" офис мебели,",
@@ -231,7 +191,7 @@ export default function Home() {
 							" консумативи за рисуване и занаяти,",
 							"други... "
 						)}
-						*/}
+						
 					</ul>
 				</div>
 				{/*
@@ -300,4 +260,45 @@ export default function Home() {
 		);
 	} else {
 	}
+}
+
+
+function buildCat(category, ref, ...subcategory) {
+	category = category.toString();
+	return (
+		<li className={styles.startpage_cat}>
+			<a
+				className={styles.startpage_cat_img}
+				href={"./categories/" + ref}
+				title={category}
+			>
+				<img src={"../img/" + category + ".jpg"} title={category}></img>
+			</a>
+			<div>
+				<a
+					className={styles.startpage_cat_title}
+					title={"show " + category + " subcategories"}
+					href={"./categories/" + ref}
+				>
+					<h2>{category}</h2>
+				</a>
+				<p className={styles.x}>{buildSubcat(subcategory)}</p>
+			</div>
+		</li>
+	);
+}
+
+function buildSubcat(...subcategory) {
+	let subcat;
+	let subcats = [];
+	for (let i = 0; i < subcategory[0].length; i++) {
+		subcat = (
+			<a className={styles.startpage_cat_sub} href={subcategory[0][i]}>
+				{subcategory[0][i + 1]}
+			</a>
+		);
+		subcats.push(subcat);
+		i++;
+	}
+	return [subcats];
 }
