@@ -247,10 +247,9 @@ function buildCat(category, ref, ...subcategory) {
 }
 
 function buildSubcat(...subcategory) {
-	let subcat;
 	let subcats = [];
 	for (let i = 0; i < subcategory[0].length; i++) {
-		subcat = (
+		let subcat = (
 			<a className={styles.startpage_cat_sub} href={subcategory[0][i]}>
 				{subcategory[0][i + 1]}
 			</a>
