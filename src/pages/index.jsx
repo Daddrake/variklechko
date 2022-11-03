@@ -194,46 +194,6 @@ export default function Home() {
 					</ul>
 				</div>
 				{/*
-		
-			<div className={styles.grid}>
-				{gpus.map((product) => {
-					return (
-						<div key={product.Title} className={styles.list}>
-							<h4>
-								<img
-									src={product.Image}
-									//width="auto"
-									//height="auto"
-									alt={`Preview of ${product.Title}`}
-								/>
-								{product.Title}
-							</h4>
-							<p>{product.Info}</p>
-							<p>
-								More info at:
-								<a href={product.Title_URL}> geizhals.de</a>
-							</p>
-							<p>
-								{product.Retailers <= 1
-									? product.Price
-									: product.Price.substring(2)}
-							</p>
-							<p>
-								<button
-									className="snipcart-add-item"
-									data-item-id={product.itemId}
-									data-item-image={product.Title_URL}
-									data-item-name={product.Info}
-									data-item-price={product.Price.substring(2)}
-								>
-									Добави в количка
-								</button>
-							</p>
-						</div>
-					);
-				})}
-			</div>
-
 		<footer className={styles.footer}>
 			<script
 				async
