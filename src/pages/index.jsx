@@ -1,14 +1,38 @@
 import styles from "./Home.module.scss";
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import Cookies from "universal-cookie";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 export default function Home() {
+	/*let reg = confirm(
+		"Искате ли да спечелите купон за пазаруване на стойност от 500лв?\nРегистрирай се сега!\nДобави артикули на стойност до 500лв в количката си.\nСпечели!"
+	);if (Navbar.reg) {
+		window.location.href = "../components/contact";
+	}*/
 	const [isLogged, setIsLogged] = useState(false);
 	if (!isLogged) {
 		return (
 			<div className={styles.container}>
 				<Navbar />
+				<div>
+					<p></p>
+				</div>
+				<div>
+					<p></p>
+				</div>
+				{/*<Popup
+					trigger={
+						<button>
+							Искате ли да спечелите купон за пазаруване на стойност от 500лв?
+							<br /> Регистрирай се сега! <br /> Добави артикули на стойност до
+							500лв в количката си и <br /> СПЕЧЕЛИ!
+						</button>
+					}
+					position="bottom"
+				>
+					<div>Popup content here !!</div>
+				</Popup>*/}
 				<div className={styles.header}>
 					<h1>VARIKLECHKO: Пазарувай лесно и евтино от Германия!</h1>
 				</div>
